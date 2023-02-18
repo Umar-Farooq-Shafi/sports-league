@@ -1,0 +1,71 @@
+<div class="flex items-center justify-center mt-16">
+  <div class="w-5/6 h-4/6">
+    <h1 class="flex text-3xl font-bold justify-center mb-3">
+      League Standings
+    </h1>
+
+    <div class="flex flex-col">
+      <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+          <div class="overflow-hidden">
+            <table class="min-w-full bg-current">
+              <thead class="border-b bg-slate-200">
+                <tr>
+                  <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                    Team Name
+                  </th>
+                  <th scope="col" class="text-sm font-medium text-gray-900 pr-2 py-4 text-right">
+                    MP
+                  </th>
+                  <th scope="col" class="text-sm font-medium text-gray-900 pr-2 py-4 text-right gd">
+                    GD
+                  </th>
+                  <th scope="col" class="text-sm font-medium text-gray-900 pr-2 py-4 text-right gf">
+                    GF
+                  </th>
+                  <th scope="col" class="text-sm font-medium text-gray-900 pr-2 py-4 text-right ga">
+                    GA
+                  </th>
+                  <th scope="col" class="text-sm font-medium text-gray-900 pr-10 py-4 text-right">
+                    Points
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr *ngFor="let team of teams; let i=index" class="bg-white">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-light text-gray-900">
+                    <div class="flex items-center">
+                      <img width="50" height="30" class="mr-5"
+                        src="{{ 'https://countryflagsapi.com/png/' + team.teamName }}" alt="flag" crossorigin
+                        loading="lazy">
+                      {{ team.teamName }}
+                    </div>
+                  </td>
+                  <td class="py-4 pr-3 whitespace-nowrap text-sm font-light text-gray-900 text-right">
+                    {{ team.matchesPlayed }}
+                  </td>
+                  <td class="py-4 pr-3 whitespace-nowrap text-sm font-light text-gray-900 text-right gd">
+                    {{ team.goalsFor - team.goalsAgainst }}
+                  </td>
+                  <td class="py-4 pr-2 whitespace-nowrap text-sm font-light text-gray-900 text-right gf">
+                    {{ team.goalsFor }}
+                  </td>
+                  <td class="py-4 pr-2 whitespace-nowrap text-sm font-light text-gray-900 text-right ga">
+                    {{ team.goalsAgainst }}
+                  </td>
+                  <td class="py-4 whitespace-nowrap text-md font-bold text-blue-600 text-right pr-14">
+                    {{ team.points }}
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
