@@ -30,13 +30,13 @@
     "jest-preset-angular": "^11.1.2",
     "json-fake-server": "^0.0.2",
     "rxjs": "~7.5.0",
-    "serve": "^13.0.2",
+    "serve": "^14.2.0",
     "ts-jest": "^27.1.5",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.2.2",
+    "@angular-devkit/build-angular": "~13.3.10",
     "@angular/cli": "~13.2.2",
     "@angular/compiler-cli": "~13.2.0",
     "@babel/core": "^7.17.8",
